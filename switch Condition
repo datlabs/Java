@@ -1,0 +1,64 @@
+/*
+Take in a number from the keyboard the corresponds to a particular month. 
+Using a switch statement to determine the name of the month and output it to the console. 
+For instance if the input was 8 the output would be August. You should also have a default statement that will report when there is invalid input. 
+In other words any value that is not between 1 and 12
+*/
+
+package exam_1_data_types_operator_decisions;
+import java.util.Scanner;
+
+public class Exam_1_Data_Types_Operator_Decisions 
+{
+
+    public static void main(String[] args) 
+    {
+              
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter your number of the months (1-12): ");
+        
+        int mthIn = in.nextInt();
+        
+        switch(mthIn)
+        {
+            case 1: 
+                System.out.println("This is January.");
+                break;
+            case 2: 
+                System.out.println("This is February.");
+                break; 
+            case 3: 
+                System.out.println("This is March.");
+                break;
+            case 4: 
+                System.out.println("This is April.");
+                break;
+            case 5: 
+                System.out.println("This is May.");
+                break;
+            case 6: 
+                System.out.println("This is June.");
+                break;
+            case 7: 
+                System.out.println("This is July.");
+                break;    
+            case 8: 
+                System.out.println("This is August.");
+                break;    
+            case 9: 
+                System.out.println("This is September.");
+                break;
+            case 10: 
+                System.out.println("This is October.");
+                break;
+            case 11: 
+                System.out.println("This is November.");
+                break;
+            case 12: 
+                System.out.println("This is December.");
+                break;
+            default:
+                System.out.println("Your entry is wrong number. Please enter from 1-12.");
+        }
+    }
+}
