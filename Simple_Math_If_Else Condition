@@ -1,0 +1,32 @@
+/*
+A farmer gets $22.75 a pound for up to 100 pounds of cotton. Above 100 pounds he gets and additional .15 per pound. 
+Ask how many pounds of cotton the farmer would like to sell, compute his total, and output it to the screen. 
+Note: Use an if else statement to compute the cost. 
+*/
+
+package exam_1_data_types_operator_decisions;
+import java.util.Scanner;
+import java.text.NumberFormat;
+
+
+public class Exam_1_Data_Types_Operator_Decisions 
+{
+
+    public static void main(String[] args) 
+    {
+        double r_100 = 22.75;
+        double r_Over_100 = 0.15;
+        
+        Scanner in = new Scanner(System.in);
+        NumberFormat cFormat = NumberFormat.getCurrencyInstance();
+        
+        System.out.print("How many pounds of cotton would like to sell: ");
+        int amtInput = in.nextInt();
+        
+        // Use if statement to compute the different Rates from 100lbs or Over 100lbs
+        if(amtInput <= 100)
+            System.out.println("Total Amount Due of " + amtInput + "lbs = " + amtInput + "pounds * " + r_100 + " = " +cFormat.format(amtInput * r_100));
+        else
+            System.out.println("Total Amount Due of " + amtInput + "lbs = " + amtInput + "pounds * " + r_100 + " + " + (amtInput-100) + "pounds Over * " + r_Over_100 + " = " +cFormat.format((amtInput * r_100)+((amtInput-100)*r_Over_100)));
+    }
+}
