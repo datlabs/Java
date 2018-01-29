@@ -1,0 +1,31 @@
+/*
+From the keyboard take in a number. Determine if the number is odd or even. 
+If the number is even assign the string literal "Even" to a string variable if it is odd assignment the string literal "Odd" to the string.  This should be computed using the conditional operator. 
+The conditional operator is NOT an if else. It is a substitute for it.
+
+Once you have computed the value output it to the screen. 
+Do not use println in conjunction with the conditional. 
+Do NOT duplicate variable assignment within the conditional. 
+Assign the value to the variable once. 
+*/
+
+package exam_1_data_types_operator_decisions;
+import java.util.Scanner;
+
+public class Exam_1_Data_Types_Operator_Decisions 
+{
+    public static void main(String[] args) 
+    {           
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        
+        int numIn = in.nextInt();           
+                   
+        // Use Conditional Operator
+        double rslt = numIn % 2;
+        String strOutput = (rslt == 0) ? "This is Even Number." : "This is Odd Number." ;
+      
+        // Printing out
+        System.out.println(strOutput);   
+    }
+}
